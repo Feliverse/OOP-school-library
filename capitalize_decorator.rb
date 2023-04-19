@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative './decorator'
 
 # correct a name to capitalized
