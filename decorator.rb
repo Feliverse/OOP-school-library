@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative './nameable'
 
+# Correct a name to capitalized and trimmer
 class Decorator < Nameable
   attr_accessor :nameable
 
