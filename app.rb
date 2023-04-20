@@ -44,7 +44,7 @@ module App
 
       parent_permission = permission == 'Y'
 
-      student = Student.new(classroom, age, name, parent_permission:)
+      student = Student.new(classroom, age, name, parent_permission: parent_permission)
       person.push(student)
       puts "\n Student created successfully!!"
     end
