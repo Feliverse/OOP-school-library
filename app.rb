@@ -21,7 +21,7 @@ module App
     end
 
     def create_person(person)
-      print "\n Do you want to create a  Student (1) or Teacher (2)? [Input the number]: "
+      print "\n Do you want to create a Student (1) or a Teacher (2)? [Input the number]: "
       option = gets.chomp
       case option
       when '1'
@@ -72,8 +72,8 @@ module App
       else
         puts "\n"
         books.each do |book|
-          puts "Title: #{book.title}"
-          puts "Author #{book.author}"
+          puts "Title:  #{book.title}"
+          puts "Author: #{book.author}"
           puts '========================'
           puts
         end
@@ -81,7 +81,7 @@ module App
     end
 
     def create_book(books)
-      print "\nTitle: "
+      print "\nTitle:  "
       title = gets.chomp
       print 'Author: '
       author = gets.chomp
@@ -127,7 +127,7 @@ module App
         print 'Book Index: '
         book_index = gets.chomp.to_i
 
-        puts 'Select a person'
+        puts "\nSelect a person"
         @peoples.each_with_index { |p, i| puts "#{i}: #{p.name}" }
         print 'Person Index: '
         people_index = gets.chomp.to_i
