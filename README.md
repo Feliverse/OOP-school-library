@@ -84,12 +84,12 @@ To install ruby go to : [Install Ruby](https://rubyinstaller.org/) and select yo
 
 ### Usage
 
-To run the project, open your project in your terminal  and type ruby index.rb .
+To run the project, open your project in your terminal  and type ruby main.rb .
 
 Example command:
 
 ```sh
-  ruby index.rb
+  ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
