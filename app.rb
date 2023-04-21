@@ -73,7 +73,7 @@ module App
         puts "\n"
         books.each do |book|
           puts "Title:  #{book.title}"
-          puts "Author: #{book.author}"
+          puts "Author: #{book.autor}"
           puts '========================'
           puts
         end
