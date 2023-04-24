@@ -29,13 +29,11 @@ class Run
       print 'option: '
 
       begin
-        option = gets.chomp
-        input = Integer(option)
-        show(input)
+        option = Integer(gets.chomp)
+        show(option)
       rescue ArgumentError
         puts 'Invalid input. Please enter a number'
       end
-      
     end
   end
 
