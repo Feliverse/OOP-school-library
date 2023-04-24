@@ -38,7 +38,7 @@ class Run
     when '1'
       list_all_books(@books)
     when '2'
-      list_all_peoples(@peoples)
+      PeopleLister.new.list_all_peoples(@peoples)
     when '6'
       list_rentals(@rentals, @peoples)
     when '7'
@@ -52,7 +52,7 @@ class Run
   def create(option)
     case option
     when '3'
-      create_person(@peoples)
+      PersonCreator.new.create_person(@peoples)
     when '4'
       create_book(@books)
     when '5'

@@ -5,63 +5,71 @@ require_relative './rental'
 
 module App
   module PeopleListing
-    def list_all_peoples(peoples)
-      if peoples.empty?
-        puts "\n NO PERSON REGISTERED!"
-      else
-        puts "\n"
-        peoples.each do |people|
-          puts "ID: #{people.id}"
-          puts "NAME:  #{people.name}"
-          puts "AGE: #{people.age}"
-          puts '========================'
-          puts
+    class PeopleLister
+      def list_all_peoples(peoples)
+        if peoples.empty?
+          puts "\n NO PERSON REGISTERED!"
+        else
+          puts "\n"
+          peoples.each do |people|
+            puts "ID: #{people.id}"
+            puts "NAME:  #{people.name}"
+            puts "AGE: #{people.age}"
+            puts '========================'
+            puts
+          end
         end
       end
     end
 
-    def create_person(person)
-      print "\n Do you want to create a Student (1) or a Teacher (2)? [Input the number]: "
-      option = gets.chomp
-      case option
-      when '1'
-        create_student(person)
-      when '2'
-        create_teacher(person)
+    class PersonCreator
+      def create_person(person)
+        print "\n Do you want to create a Student (1) or a Teacher (2)? [Input the number]: "
+        option = gets.chomp
+        case option
+        when '1'
+          StudentCreator.new.create_student(person)
+        when '2'
+          TeacherCreator.new.create_teacher(person)
+        end
       end
     end
 
-    def create_student(person)
-      puts "\n"
-      print 'Age: '
-      age = gets.chomp
-      print 'Name: '
-      name = gets.chomp
-      print 'Has Parent Permission? [Y/N]: '
-      permission = gets.chomp.upcase
-      print 'Classroom: '
-      classroom = gets.chomp
+    class StudentCreator
+      def create_student(person)
+        puts "\n"
+        print 'Age: '
+        age = gets.chomp
+        print 'Name: '
+        name = gets.chomp
+        print 'Has Parent Permission? [Y/N]: '
+        permission = gets.chomp.upcase
+        print 'Classroom: '
+        classroom = gets.chomp
 
-      parent_permission = permission == 'Y'
+        parent_permission = permission == 'Y'
 
-      student = Student.new(classroom, age, name, parent_permission: parent_permission)
-      person.push(student)
-      puts "\n Student created successfully!!"
+        student = Student.new(classroom, age, name, parent_permission: parent_permission)
+        person.push(student)
+        puts "\n Student created successfully!!"
+      end
     end
 
-    def create_teacher(person)
-      print 'Age: '
-      age = gets.chomp
-      print 'Name: '
-      name = gets.chomp
-      print 'Specialization: '
-      specialization = gets.chomp
+    class TeacherCreator
+      def create_teacher(person)
+        print 'Age: '
+        age = gets.chomp
+        print 'Name: '
+        name = gets.chomp
+        print 'Specialization: '
+        specialization = gets.chomp
 
-      teacher = Teacher.new(age, specialization, name)
+        teacher = Teacher.new(age, specialization, name)
 
-      person.push(teacher)
+        person.push(teacher)
 
-      puts 'Teacher created successfully!!'
+        puts 'Teacher created successfully!!'
+      end
     end
   end
 
