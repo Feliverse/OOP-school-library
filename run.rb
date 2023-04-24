@@ -35,11 +35,11 @@ class Run
   def show(option)
     case option
     when '1'
-      list_all_books(@books)
+      BooksLister.new.list(@books)
     when '2'
-      PeopleLister.new.list_all_peoples(@peoples)
+      PeopleLister.new.list(@peoples)
     when '6'
-      list_rentals(@rentals, @peoples)
+      RentalLister.new.list(@rentals, @peoples)
     when '7'
       puts 'Exit'
       exit
@@ -51,11 +51,11 @@ class Run
   def create(option)
     case option
     when '3'
-      PersonCreator.new.create_person(@peoples)
+      PersonCreator.new.create(@peoples)
     when '4'
-      create_book(@books)
+      BookCreator.new.create(@books)
     when '5'
-      create_rental(@rentals, @books, @peoples)
+      RentalCreator.new.create(@rentals, @books, @peoples)
     end
   end
 end
