@@ -139,8 +139,4 @@ module App
       end
     end
   end
-
-  include PeopleListing
-  include BookLisitng
-  include RentalListing
 end
