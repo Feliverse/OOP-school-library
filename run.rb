@@ -27,20 +27,27 @@ class Run
         7 - Exit
         "
       print 'option: '
-      option = gets.chomp
-      show(option)
+
+      begin
+        option = gets.chomp
+        input = Integer(option)
+        show(input)
+      rescue ArgumentError
+        puts 'Invalid input. Please enter a number'
+      end
+      
     end
   end
 
   def show(option)
     case option
-    when '1'
+    when 1
       BooksLister.new.list(@books)
-    when '2'
+    when 2
       PeopleLister.new.list(@peoples)
-    when '6'
+    when 6
       RentalLister.new.list(@rentals, @peoples)
-    when '7'
+    when 7
       puts 'Exit'
       exit
     else
@@ -50,11 +57,11 @@ class Run
 
   def create(option)
     case option
-    when '3'
+    when 3
       PersonCreator.new.create(@peoples)
-    when '4'
+    when 4
       BookCreator.new.create(@books)
-    when '5'
+    when 5
       RentalCreator.new.create(@rentals, @books, @peoples)
     end
   end
