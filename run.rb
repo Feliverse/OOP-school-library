@@ -3,7 +3,9 @@ require_relative './book'
 
 class Run
   include App
-  include PeopleListing, BookLisitng, RentalListing
+  include RentalListing
+  include BookLisitng
+  include PeopleListing
 
   def initialize
     @books = []
