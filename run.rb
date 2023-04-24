@@ -15,7 +15,7 @@ class Run
 
   def main
     loop do
-      puts "\n\nWelcome to School Library APP! \n\n"
+      puts "\n\n Welcome to School Library APP! \n\n"
       print 'Please Choose an option by enerin a number: '
       puts "
         1 - List all books
