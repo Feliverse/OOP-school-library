@@ -20,7 +20,7 @@ module BookLisitng
 
   class BookCreator
     include CrudBook
-    def create(books)
+    def create()
       print "\nTitle:  "
       title = gets.chomp
       print 'Author: '

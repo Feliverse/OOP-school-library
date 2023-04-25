@@ -60,7 +60,7 @@ class Run
     when 3
       PersonCreator.new.create(@peoples)
     when 4
-      BookCreator.new.create(@books)
+      BookCreator.new.create()
       @books = ListBook.new.list
     when 5
       RentalCreator.new.create(@rentals, @books, @peoples)
