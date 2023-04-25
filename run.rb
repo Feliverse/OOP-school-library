@@ -1,14 +1,16 @@
 require_relative './app'
 require_relative './book'
+require_relative 'modules/crud_book'
 
 class Run
   include App
   include RentalListing
   include BookLisitng
   include PeopleListing
+  include CrudBook
 
   def initialize
-    @books = []
+    @books = ListBook.new.list
     @peoples = []
     @rentals = []
   end
@@ -59,6 +61,7 @@ class Run
       PersonCreator.new.create(@peoples)
     when 4
       BookCreator.new.create(@books)
+      @books = ListBook.new.list
     when 5
       RentalCreator.new.create(@rentals, @books, @peoples)
     end

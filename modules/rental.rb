@@ -27,7 +27,6 @@ module RentalListing
   end
 
   class RentalCreator
-        
     def create(rentals, books, peoples)
       puts "\n"
       if books.empty?
