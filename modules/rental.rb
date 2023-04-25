@@ -1,4 +1,5 @@
 require_relative '../rental'
+
 module RentalListing
   class RentalLister
     def list(rentals, peoples)
@@ -26,20 +27,21 @@ module RentalListing
   end
 
   class RentalCreator
+        
     def create(rentals, books, peoples)
       puts "\n"
-      if @books.empty?
+      if books.empty?
         puts "\nNO BOOKS TO RENT!\n"
-      elsif @peoples.empty?
+      elsif peoples.empty?
         puts "\nNO PEOPLE TO RENT!\n"
       else
         puts 'Select a Book: '
-        @books.each_with_index { |b, i| puts "#{i}: #{b.title} (#{b.author}) " }
+        books.each_with_index { |b, i| puts "#{i}: #{b.title} (#{b.author}) " }
         print 'Book Index: '
         book_index = gets.chomp.to_i
 
         puts "\nSelect a person"
-        @peoples.each_with_index { |p, i| puts "#{i}: #{p.name}" }
+        peoples.each_with_index { |p, i| puts "#{i}: #{p.name}" }
         print 'Person Index: '
         people_index = gets.chomp.to_i
 
