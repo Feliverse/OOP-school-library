@@ -3,9 +3,7 @@ require 'fileutils'
 require_relative 'crud/read'
 require_relative 'crud/update'
 
-
 module CrudBook
-    
   class SaveBook
     def save(books)
       old_data = Read.new.read_file('books')
