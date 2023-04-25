@@ -48,7 +48,7 @@ module PeopleListing
 
       parentpermission = permission == 'Y'
 
-      student = Student.new(classroom, age, name, parentpermission:parentpermission)
+      student = Student.new(classroom, age, name, parentpermission: parentpermission)
       SavePeople.new.save([student])
       # person.push(student)
       puts "\n Student created successfully!!"
