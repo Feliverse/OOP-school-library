@@ -1,5 +1,7 @@
 require_relative '../student'
 require_relative '../teacher'
+require_relative 'crud_people'
+
 module PeopleListing
   class PeopleLister
     def list(peoples)
@@ -8,9 +10,9 @@ module PeopleListing
       else
         puts "\n"
         peoples.each do |people|
-          puts "ID: #{people.id}"
-          puts "NAME:  #{people.name}"
-          puts "AGE: #{people.age}"
+          puts "ID:   #{people['id']}"
+          puts "NAME: #{people['name']}"
+          puts "AGE:  #{people['age']}"
           puts '========================'
           puts
         end
@@ -32,7 +34,8 @@ module PeopleListing
   end
 
   class StudentCreator
-    def create(person)
+    include CrudPeople
+    def create(_person)
       puts "\n"
       print 'Age: '
       age = gets.chomp
@@ -43,26 +46,27 @@ module PeopleListing
       print 'Classroom: '
       classroom = gets.chomp
 
-      parent_permission = permission == 'Y'
+      parentpermission = permission == 'Y'
 
-      student = Student.new(classroom, age, name, parent_permission: parent_permission)
-      person.push(student)
+      student = Student.new(classroom, age, name, parentpermission: parentpermission)
+      SavePeople.new.save([student])
+      # person.push(student)
       puts "\n Student created successfully!!"
     end
   end
 
   class TeacherCreator
-    def create(person)
+    include CrudPeople
+    def create(_person)
       print 'Age: '
       age = gets.chomp
       print 'Name: '
       name = gets.chomp
       print 'Specialization: '
       specialization = gets.chomp
-
       teacher = Teacher.new(age, specialization, name)
-
-      person.push(teacher)
+      SavePeople.new.save([teacher])
+      # person.push(teacher)
 
       puts 'Teacher created successfully!!'
     end

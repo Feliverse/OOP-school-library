@@ -1,4 +1,6 @@
 require_relative '../book'
+require_relative 'crud_book'
+
 module BookLisitng
   class BooksLister
     def list(books)
@@ -7,8 +9,8 @@ module BookLisitng
       else
         puts "\n"
         books.each do |book|
-          puts "Title:  #{book.title}"
-          puts "Author: #{book.author}"
+          puts "Title:  #{book['title']}"
+          puts "Author: #{book['author']}"
           puts '========================'
           puts
         end
@@ -17,13 +19,14 @@ module BookLisitng
   end
 
   class BookCreator
-    def create(books)
+    include CrudBook
+    def create()
       print "\nTitle:  "
       title = gets.chomp
       print 'Author: '
       author = gets.chomp
       book = Book.new(title, author)
-      books.push(book)
+      SaveBook.new.save([book])
       puts "\n Book added sucessfully!"
     end
   end

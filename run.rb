@@ -1,16 +1,22 @@
 require_relative './app'
 require_relative './book'
+require_relative 'modules/crud_book'
+require_relative 'modules/crud_people'
+require_relative 'modules/crud_rental'
 
 class Run
   include App
   include RentalListing
   include BookLisitng
   include PeopleListing
+  include CrudBook
+  include CrudPeople
+  include CrudRental
 
   def initialize
-    @books = []
-    @peoples = []
-    @rentals = []
+    @books = ListBook.new.list
+    @peoples = ListPeople.new.list
+    @rentals = ListRental.new.list
   end
 
   def main
@@ -44,7 +50,7 @@ class Run
     when 2
       PeopleLister.new.list(@peoples)
     when 6
-      RentalLister.new.list(@rentals, @peoples)
+      RentalLister.new.list(@rentals, @peoples, @books)
     when 7
       puts 'Exit'
       exit
@@ -57,10 +63,13 @@ class Run
     case option
     when 3
       PersonCreator.new.create(@peoples)
+      @peoples = ListPeople.new.list
     when 4
-      BookCreator.new.create(@books)
+      BookCreator.new.create
+      @books = ListBook.new.list
     when 5
       RentalCreator.new.create(@rentals, @books, @peoples)
+      @rentals = ListRental.new.list
     end
   end
 end

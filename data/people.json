@@ -1,0 +1,39 @@
+[
+  {
+    "id": 4,
+    "role": "teacher",
+    "name": "nenen",
+    "age": "123",
+    "specialization": "asasas"
+  },
+  {
+    "id": 56,
+    "role": "student",
+    "name": "qwerty",
+    "age": "123",
+    "classroom": "asdf"
+  },
+  {
+    "id": 69,
+    "role": "student",
+    "name": "qaz",
+    "age": "321",
+    "classroom": "wer",
+    "parentpermission": true
+  },
+  {
+    "id": 58,
+    "role": "teacher",
+    "name": "teacher",
+    "age": "45",
+    "specialization": "magic"
+  },
+  {
+    "id": 17,
+    "role": "student",
+    "name": "agustin",
+    "age": "12",
+    "classroom": "class",
+    "parentpermission": true
+  }
+]
