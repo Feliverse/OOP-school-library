@@ -33,32 +33,10 @@ module RentalListing
       else
         person_rentals.each do |rental|
           book = books.find { |booki| booki['id'] == rental['id_book'] }
-          puts "Date: #{rental['date']}, Book: \"#{book['title']}\" by #{book['author']}"
+          puts "\nDate: #{rental['date']}\nBook: \"#{book['title']}\" by #{book['author']}"
         end
       end
     end
-    # def list(rentals, peoples, books)
-    #       if rentals.empty?
-    #         puts "\n NO RENTAL!"
-    #       else
-    #         puts "\n Select a person by index"
-    #         peoples.each_with_index { |p, i| puts "#{i}: #{p['name']}" }
-    #         print 'Person Index: '
-    #           if peoples.include?(peoples[gets.chomp.to_i])
-    #             person_rentals = rentals.select { |rental| rental['id_person'] == peoples[gets.chomp.to_i]['id'] }
-    #           if person_rentals.empty?
-    #             puts 'No Rentals'
-    #           else
-    #             person_rentals.each do |rental|
-    #               book = books.find { |booki| booki['id'] == rental['id_book'] }
-    #               puts "Date: #{rental['date']}, Book: \"#{book['title']}\" by #{book['author']}"
-    #             end
-    #           end
-    #         else
-    #           puts 'NO RENTALS'
-    #         end
-    #       end
-    #     end
   end
 
   class RentalCreator

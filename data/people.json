@@ -2,38 +2,38 @@
   {
     "id": 4,
     "role": "teacher",
-    "name": "nenen",
+    "name": "Jaime Escalante",
     "age": "123",
-    "specialization": "asasas"
+    "specialization": "Math"
   },
   {
     "id": 56,
     "role": "student",
-    "name": "qwerty",
-    "age": "123",
-    "classroom": "asdf"
+    "name": "Qwerty",
+    "age": "23",
+    "classroom": "Math"
   },
   {
     "id": 69,
     "role": "student",
-    "name": "qaz",
-    "age": "321",
-    "classroom": "wer",
+    "name": "Ander Canales",
+    "age": "32",
+    "classroom": "Math",
     "parentpermission": true
   },
   {
     "id": 58,
     "role": "teacher",
-    "name": "teacher",
+    "name": "One Tacher",
     "age": "45",
-    "specialization": "magic"
+    "specialization": "Ruby"
   },
   {
     "id": 17,
     "role": "student",
-    "name": "agustin",
+    "name": "Agustin Haybar",
     "age": "12",
-    "classroom": "class",
+    "classroom": "Ruby",
     "parentpermission": true
   }
 ]
