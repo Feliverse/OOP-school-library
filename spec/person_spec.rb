@@ -1,9 +1,9 @@
-required 'spec_helper'
-required 'date'
+require 'spec_helper'
+require 'date'
 
 describe Person do
   before :each do
-    @person = Person.new(22, 'Name', parent_permission: false)
+    @person = Person.new(22, 'Name', parentpermission: true)
     @book = Book.new('Title', 'Author')
   end
   describe '#new' do
@@ -11,7 +11,6 @@ describe Person do
       expect(@person).to be_an_instance_of(Person)
     end
   end
-=begin
   describe '#correct_name' do
     it 'Return the name of the person' do
       expect(@person.correct_name).to eq('Name')
@@ -29,10 +28,9 @@ describe Person do
     end
   end
 
-  describe '#is_of_age?' do
+  describe '#of_age?' do
     it 'Should return true since the person is of age' do
-      expect(@person.send(:is_of_age?)).to be_truthy
+      expect(@person.send(:of_age?)).to be_truthy
     end
   end
-=end
 end
