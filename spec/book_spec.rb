@@ -8,7 +8,7 @@ describe Book do
     it 'Should return the recent author and title' do
       book = Book.new('Game of thrones', 'George R. Martin')
       message = "#{book.author} wrote #{book.title}"
-      
+
       expect(message).to eq 'George R. Martin wrote Game of thrones'
     end
 
