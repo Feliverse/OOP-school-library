@@ -6,3 +6,4 @@ require_relative '../classroom'
 require_relative '../rental'
 
 require 'yaml'
+require 'date'
