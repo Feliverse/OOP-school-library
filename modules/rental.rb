@@ -4,7 +4,6 @@ require_relative '../book'
 require_relative '../student'
 require_relative '../teacher'
 
-
 module RentalListing
   class RentalLister
     def list(rentals, peoples, books)
