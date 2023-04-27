@@ -45,7 +45,7 @@ module RentalListing
 
   class RentalCreator
     include CrudRental
-    def create(rentals, books, peoples)
+    def create(_rentals, books, peoples)
       validate_books_and_peoples(books, peoples)
 
       book_data = select_book(books)
