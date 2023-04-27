@@ -7,7 +7,6 @@ require_relative '../rental'
 require_relative '../nameable'
 require_relative '../capitalize_decorator'
 require_relative '../trimmer_decorator'
-require_relative '../nameable'
 
 require 'yaml'
 require 'date'
