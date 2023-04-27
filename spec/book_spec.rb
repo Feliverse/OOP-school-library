@@ -1,7 +1,4 @@
-require 'date'
-
-require_relative '../book'
-require_relative '../student'
+require_relative 'spec_helper'
 
 describe Book do
   context 'Testing Book class and method' do

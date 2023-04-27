@@ -27,7 +27,7 @@ describe Teacher do
       expect(@teacher.id).to be_between(1, 100).inclusive
     end
   end
-  
+
   describe '#can_use_services?' do
     it 'Should always be able to use services' do
       expect(@teacher.can_use_services?).to be_truthy

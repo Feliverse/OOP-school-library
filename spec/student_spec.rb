@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Student do
   before :each do
-    @student = Student.new 'Testing Lab', 21, 'Steve Job' 
+    @student = Student.new 'Testing Lab', 21, 'Steve Job'
   end
 
   describe '#new' do
