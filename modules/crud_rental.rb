@@ -8,7 +8,7 @@ module CrudRental
     def save(rentals)
       old_data = Read.new.read_file('rentals')
       new_data = rentals.map do |rental|
-        general = { id_person: rental.person[:id], id_book: rental.book[:id], date: rental.date }
+        general = { id_person: rental.person.id, id_book: rental.book.id, date: rental.date }
         general
       end
       total_data = old_data + new_data
