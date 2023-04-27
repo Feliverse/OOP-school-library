@@ -1,39 +1,17 @@
 [
   {
-    "id": 4,
-    "role": "teacher",
-    "name": "Jaime Escalante",
-    "age": "123",
-    "specialization": "Math"
-  },
-  {
-    "id": 56,
-    "role": "student",
-    "name": "Qwerty",
-    "age": "23",
-    "classroom": "Math"
-  },
-  {
-    "id": 69,
-    "role": "student",
-    "name": "Ander Canales",
-    "age": "32",
-    "classroom": "Math",
-    "parentpermission": true
-  },
-  {
     "id": 58,
-    "role": "teacher",
-    "name": "One Tacher",
-    "age": "45",
-    "specialization": "Ruby"
+    "role": "student",
+    "name": "anderson",
+    "age": "22",
+    "classroom": "c-501",
+    "parentpermission": true
   },
   {
-    "id": 17,
-    "role": "student",
-    "name": "Agustin Haybar",
-    "age": "12",
-    "classroom": "Ruby",
-    "parentpermission": true
+    "id": 92,
+    "role": "teacher",
+    "name": "farid",
+    "age": "45",
+    "specialization": "math"
   }
 ]
