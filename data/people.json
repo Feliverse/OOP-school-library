@@ -1,0 +1,17 @@
+[
+  {
+    "id": 58,
+    "role": "student",
+    "name": "anderson",
+    "age": "22",
+    "classroom": "c-501",
+    "parentpermission": true
+  },
+  {
+    "id": 92,
+    "role": "teacher",
+    "name": "farid",
+    "age": "45",
+    "specialization": "math"
+  }
+]
